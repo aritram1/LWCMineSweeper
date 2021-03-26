@@ -1,0 +1,45 @@
+<template>
+    <div class="container">
+        <div class="header">
+            <img class="logo" src="./resources/lwc.png"/>
+            <div class="timer">
+                Timer : {timerValue}
+            </div>
+            <div class="score"> Score : {score}/{openedMines} </div>
+
+            <div class="boardParams">
+                <input type="number" value={size} oninput={handleMatrixSizeChange}/>  
+                <input type="button" class="header__btn" value="Generate" onclick={generateBoard}/>      
+            </div>
+                
+            <input type="button" class="header__btn" value={buttonName} onclick={handleStartStop}/>     
+            
+        </div>
+        <div class="board">
+            <template for:each={board} for:item="box">
+                <!-- <template if:true={box.hasMine}>
+                    <div class="box hasMine" key={box.id} data-bid={box.id} onclick={handleBoxClick}>
+                        {box.id} - {box.hasMine}
+                    </div>
+                </template>
+                <template if:false={box.hasMine}>
+                    <div class="box" key={box.id} data-bid={box.id} onclick={handleBoxClick}>
+                        {box.id} - {box.hasMine}
+                    </div>
+                </template> -->
+                <!-- <template> -->
+                    <template if:true={box.hidden}>
+                        <div class="box hidden" key={box.id} data-bid={box.id} onclick={handleBoxClick}>
+                            <!-- Id : {box.id} <br/> Hidden : {box.hidden} <br/> Mine : {box.hasMine} -->
+                        </div>
+                    </template>
+                    <template if:false={box.hidden}>
+                        <div class="box" key={box.id}>
+                            <!-- Id : {box.id} <br/> Hidden : {box.hidden} <br/> Mine : {box.hasMine} -->
+                        </div>
+                    </template>
+                <!-- </template> -->
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,75 @@
+/* $color: 'red'; */
+*{
+    font-family: monospace;
+}
+.header{
+    display: grid;
+    grid-template-columns: auto auto auto auto 1fr;
+    margin-bottom: 10px;
+    grid-auto-flow: column;
+}
+.logo{
+    /* background-color: red; */
+    height: 22px;
+    width: 20px;
+}
+.timer{
+    /* background-color: teal; */
+    text-align: center;
+    padding-top: 40px;
+    color: black;   
+}
+.score{
+    padding-top: 4px;
+}
+
+.board{
+    /* background-color: blanchedalmond; */
+    /* background-image: url(../../../resources/lwc.png); */
+    background-image: url(https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/Untitled-design--1-.png);
+    background-repeat:no-repeat;
+    display: grid;
+    /* gap: 1px; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.box.hidden{
+    background-color: rgb(123, 39, 202);
+}
+.box{
+    height: 100px;
+    background-color: rgba(123, 39, 202, 0.3);
+    border-radius: 5%;
+    border: 2px solid white;
+}
+.hasMine{
+    background-color: aqua;
+}
+.header__btn{
+    margin-left: 4px;
+    
+    align-self: right;
+    /* width: 10px; */
+    /* padding-right: 4px; */
+    /* width: 20px; */
+}
+.container{
+    margin: 20px;
+    /* padding-left: */
+}
+
+.header div{
+    padding: 1px;
+}
+
+/* .boardParams{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2px;
+    margin-left: 4px;
+    width: 100%
+} */
+
+.header > div{
+    margin-left: 5px;
+}
